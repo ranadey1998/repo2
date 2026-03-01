@@ -1,7 +1,3 @@
-<<<<<<< HEAD
+
 HI I AM RANA DEY
-WELCOME TO MY FOLDER and pusing into main rep
-=======
-HI I AM RANA 
-THIS CODE IS PUSH INTO "MASTER"
->>>>>>> main
+WELCOME TO MY FOLDER and pusing into main repo
