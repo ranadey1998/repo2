@@ -1,0 +1,32 @@
+folder('cybersure-projects') {
+    description('Folder containing CyberSure Client Portal Web project pipelines')
+}
+
+def microservices = [
+    'cybersure-clientportal-web'
+]
+
+microservices.each { jobName ->
+
+    pipelineJob("cybersure-projects/${jobName}") {
+
+        description("Pipeline for ${jobName} microservice under CyberSure project")
+
+        definition {
+            cpsScm {
+                scm {
+                    git {
+                        remote {
+                            url('https://bitbucket.org/Indus_Net/jenkins.git')
+                            credentials('prasit1')
+                        }
+                        branches('*/CyberSure-UAT')
+                    }
+                }
+
+                scriptPath("cybersurejenkins/${jobName.replace('cybersure-', '')}/Jenkinsfile")
+                lightweight(true)
+            }
+        }
+    }
+}
