@@ -1,0 +1,6 @@
+subscription_id      = "97fdc201-cb4f-4f07-97d3-83210f66492b"
+resource_group_name  = "gsone_uat"
+location             = "Central India"
+logic_app_name       = "gsone_uat_vm_db_start_stop"
+postgres_server_name = "gsonetimescaledbserver-test"
+environment          = "test"
